@@ -1,0 +1,39 @@
+version: "3.7"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - 7331:5000
+    env_file: .env
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=main.py
+    volumes:
+      - ./backend:/app/backend
+    depends_on:
+      - db
+    command: flask run --host=0.0.0.0 --port=5000
+
+  frontend:
+    build: ./frontend
+    ports:
+      - 7332:3000
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./frontend:/app/frontend
+    depends_on:
+      - db
+      - backend
+    command: yarn start
+
+  db:
+    image: codewit/mobilitydb
+    ports:
+      - 25432:5432
+    volumes:
+      - "db_data:/var/lib/postgresql"
+
+volumes:
+  db_data:

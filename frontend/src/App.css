@@ -1,0 +1,15 @@
+.App {
+  height: 100vh;
+}
+
+.modeAndTime {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 16px;
+  margin: 8px;
+  align-items: center;
+}
+
+.rhsHelp {
+  padding: 24px;
+}
