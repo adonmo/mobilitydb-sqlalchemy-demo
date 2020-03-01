@@ -4,7 +4,7 @@
 
 .modeAndTime {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 240px 1fr 32px;
   gap: 16px;
   margin: 8px;
   align-items: center;
@@ -12,4 +12,10 @@
 
 .rhsHelp {
   padding: 24px;
+}
+
+.github {
+  color: black;
+  font-style: inherit;
+  font-size: 2.4rem;
 }

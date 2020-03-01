@@ -1,13 +1,14 @@
-import { Col, Row, Slider, Select, Alert } from "antd";
+import { GithubOutlined } from '@ant-design/icons';
+import { Alert, Col, Row, Select, Slider } from "antd";
 import moment from "moment";
 import React, { useEffect, useState } from "react";
-import { Map, TileLayer, Circle } from "react-leaflet";
+import { Circle, Map, TileLayer } from "react-leaflet";
+import "./App.css";
+import SpatialQueryHelp from "./components/SpatialQueryHelp";
 import TimeFilteredTrace from "./components/TimeFilteredTrace";
 import TripsList from "./components/TripsList";
 import { useTrips, useTripsBySpatialQuery } from "./hooks/trips";
 import { makeSmartSetState } from "./hooks/utils";
-import "./App.css";
-import SpatialQueryHelp from "./components/SpatialQueryHelp";
 
 function App() {
   const ALL_TRIPS = 0,
@@ -66,6 +67,9 @@ function App() {
               tipFormatter={e => moment(e).format("LTS ll")}
               style={{userSelect: "none"}}
             />
+            <a className="github" target="_blank" href="https://github.com/adonmo/mobilitydb-sqlalchemy-demo">
+              <GithubOutlined />
+            </a>
           </div>
 
           <Map
