@@ -63,7 +63,7 @@ def trips_by_spatial_query():
     ])
 
 
-@app.route('/mobilitydb-sqlalchemy-demo/ping')
+@app.route('/mobilitydb_sqlalchemy_demo/ping')
 def ping():
     """This is just here so that we can deploy this on a provider who needs a health check endpoint"""
     return "OK"

@@ -6,6 +6,8 @@
 
 This is a demo app for [mobilitydb-sqlalchemy](https://github.com/adonmo/mobilitydb-sqlalchemy). We are using [GPS Trajectories Data Set](https://archive.ics.uci.edu/ml/datasets/GPS+Trajectories) available on UCI Machine Learning Repository to tinker around with our library.
 
+**Live Demo**: https://mobilitydb-sqlalchemy-demo.adonmo.com
+
 Like most webapps, the demo is structured into a frontend part and a backend part, along with the database (postgres+mobilitydb). All three can be run at once using docker-compose, as described in more detail below.
 
 In this demo, you can:
