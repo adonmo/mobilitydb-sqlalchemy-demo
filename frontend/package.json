@@ -8,7 +8,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "antd": "^3.26.12",
-    "codemirror": "^5.52.0",
+    "codemirror": "^5.58.2",
     "leaflet": "^1.6.0",
     "moment": "^2.24.0",
     "randomcolor": "^0.5.4",
